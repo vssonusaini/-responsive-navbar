@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,400&display=swap");
+
+/* ----reset----- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+/* ------root----- */
+:root {
+  --main-color: #fff;
+  --body-color: #d9e2f6;
+  --theam: rgb(245, 44, 181);
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: absolute;
+}
+
+.menu_links {
+  display: flex;
+}
+
+.menu_links a {
+  padding: 0.6rem 1rem;
+}
+.menu_links a:hover {
+  background-color: var(--theam);
+  color: var(--main-color);
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .hamburger {
+    display: block;
+  }
+  .menu_list {
+    position: fixed;
+    top: 3rem;
+    flex-direction: column;
+  }
+  .menu_links{
+      flex-direction: column;
+  }
+}
